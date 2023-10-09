@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://brmp7kpaktg5d"]
+
+[ext_resource type="Script" path="res://elements/enemygroup/enemy_group.gd" id="1_idylh"]
+[ext_resource type="PackedScene" uid="uid://bgc7sasy1th2u" path="res://elements/enemy/enemy.tscn" id="2_vj0u5"]
+
+[node name="Enemy_group" type="Node2D" groups=["enemy_group"]]
+script = ExtResource("1_idylh")
+
+[node name="Enemy" parent="." instance=ExtResource("2_vj0u5")]
+position = Vector2(27, 26)
+
+[node name="Enemy7" parent="." instance=ExtResource("2_vj0u5")]
+position = Vector2(187, 66)
+
+[node name="Enemy6" parent="." instance=ExtResource("2_vj0u5")]
+position = Vector2(121, 66)
+
+[node name="Enemy5" parent="." instance=ExtResource("2_vj0u5")]
+position = Vector2(57, 66)
+
+[node name="Enemy4" parent="." instance=ExtResource("2_vj0u5")]
+position = Vector2(216, 27)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_vj0u5")]
+position = Vector2(152, 26)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_vj0u5")]
+position = Vector2(89, 26)
+
+[node name="Blocker" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="Shooter" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Shooter" to="." method="_on_shooter_timeout"]

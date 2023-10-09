@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://odq7fy1gx05h"]
+
+[ext_resource type="Texture2D" uid="uid://tubm22elob2g" path="res://assets/spaceShip.png" id="1_jldlp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e42nq"]
+atlas = ExtResource("1_jldlp")
+region = Rect2(9.58564, 9.40059, 29.5949, 31.0665)
+
+[node name="Heart" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+texture = SubResource("AtlasTexture_e42nq")
+expand_mode = 1
+stretch_mode = 5

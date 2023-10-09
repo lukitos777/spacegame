@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlq425rt4opy1"]
+
+[ext_resource type="Script" path="res://elements/livesbar/lives_bar.gd" id="1_w0sbq"]
+[ext_resource type="PackedScene" uid="uid://odq7fy1gx05h" path="res://elements/livesbar/heart.tscn" id="2_uqttp"]
+
+[node name="LivesBar" type="HBoxContainer"]
+script = ExtResource("1_w0sbq")
+
+[node name="Heart" parent="." instance=ExtResource("2_uqttp")]
+layout_mode = 2
+
+[node name="Heart2" parent="." instance=ExtResource("2_uqttp")]
+layout_mode = 2
+
+[node name="Heart3" parent="." instance=ExtResource("2_uqttp")]
+layout_mode = 2
